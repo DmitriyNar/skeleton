@@ -14,9 +14,9 @@ mongoose.connection.on('error', ()=>{
 
 
 
-//app.get("/", (req, res)=>{
-//    res.status(200).send("hello");
-//})
+app.get("/", (req, res)=>{
+   res.status(200).send(template());
+})
 
 app.listen(config.port, (err)=>{
     if (err) console.log(err)
