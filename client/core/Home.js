@@ -4,7 +4,8 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
-import seaShell from './../assets/images/seashell.jpeg'
+import unicornbike from './../assets/images/unicornbike.jpg'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme)=>(
     {
@@ -31,12 +32,15 @@ export default function Home(){
             <Typography variant="h6" className={classes.title}>
               Home Page
             </Typography>
-            <CardMedia className={classes.media} image={seaShell} title="Unicorn Bicycle"/>
+            <CardMedia className={classes.media} image={unicornbike} title="Unicorn Bicycle"/>
             <Typography variant="body2" component="p" className={classes.credit} color="textSecondary">Photo by <a href="https://unsplash.com/@boudewijn_huysmans" target="_blank" rel="noopener noreferrer">Boudewijn Huysmans</a> on Unsplash</Typography>
             <CardContent>
               <Typography variant="body1" component="p">
                 Welcome to the MERN Skeleton home page.
               </Typography>
+              <Link to='/users'>Users</Link><br/>
+              <Link to='/signup'>Signup</Link><br/>
+              <Link to="/signin">Signin</Link>
             </CardContent>
           </Card>
       )

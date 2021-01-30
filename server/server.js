@@ -6,9 +6,13 @@ import template from "./../template.js"
 
 // Mongoose connection
 mongoose.Promise = global.Promise
-mongoose.connect(config.mongoURI)
+mongoose.connect(config.mongoURI,{
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
+})
 mongoose.connection.on('error', ()=>{
-    throw new Error('unable to connect to MongoURI');
+    throw new Error('Unable to connect to MongoURI');
 })
 
 
