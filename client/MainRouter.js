@@ -8,8 +8,7 @@ import EditProfile from './user/EditProfile';
 import Profile from './user/Profile';
 import Menu from './core/Menu'
 
-class MainRouter extends Component{
-    render(){
+const MainRouter =()=>{
         return (
             <div>
                 <Menu />
@@ -23,7 +22,7 @@ class MainRouter extends Component{
                 </Switch>
             </div>
         )
-    }
+    
 }
 
 export default MainRouter

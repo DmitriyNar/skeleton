@@ -1,7 +1,7 @@
 import config from "./../config/config.js"
 import app from "./express.js"
 import mongoose from 'mongoose'
-import template from "./../template.js"
+
 
 
 // Mongoose connection
@@ -18,9 +18,7 @@ mongoose.connection.on('error', ()=>{
 
 
 
-app.get("/", (req, res)=>{
-   res.status(200).send(template());
-})
+
 
 app.listen(config.port, (err)=>{
     if (err) console.log(err)
